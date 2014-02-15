@@ -1,0 +1,34 @@
+<h2>People</h2>
+<table>
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Company Name</th>
+		<th>Label</th>
+		<th>Address</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Phone</th>
+		<th>Mobile</th>
+		<th>Fax</th>
+		<th>Email</th>
+		<th>Notes</th>
+	</tr>
+	{{#each}}
+	<tr>
+		<td>{{firstName}}</td>
+		<td>{{lastName}}</td>
+		<td>{{companyName}}</td>
+		<td>{{label}}</td>
+		<td>{{address}}</td>
+		<td>{{city}}</td>
+		<td>{{state}}</td>
+		<td>{{phone}}</td>
+		<td>{{mobile}}</td>
+		<td>{{fax}}</td>
+		<td>{{email}}</td>
+		<td>{{notes}}</td>
+	</tr>
+	{{/each}}
+</table>
+
