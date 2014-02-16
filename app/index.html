@@ -7,6 +7,16 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- @if dist=false -->
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
+  <script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- @endif --><!-- @if dist=true -->
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- @endif -->
+
   <!-- build:css(tmp/result) /assets/app.min.css -->
   <link rel="stylesheet" href="/assets/app.css">
   <!-- endbuild -->
