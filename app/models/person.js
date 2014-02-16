@@ -20,49 +20,12 @@ var Person = DS.Model.extend({
 	}.property('firstName', 'lastName'),
 
 	label: function () {
-		if(this.get('companyName') === undefined)
-			return this.get('fullName');
-		else
+		console.log(this.get('fullName'), this.get('companyName'));
+		if(this.get('companyName'))
 			return this.get('companyName');
+		else
+			return this.get('fullName');
 	}.property('companyName', 'fullName')
 });
-
-Person.FIXTURES = [{
-	id: 1,
-	firstName: 'Cersei',
-	lastName: 'Lannister',
-	companyName: 'Westerlands',
-	address: 'Red Keep',
-	city: "King's Landing",
-	state: 'Crownlands',
-	phone: '555-1212',
-	mobile: '555-1212',
-	fax: '555-1212',
-	email: 'cersei@lannister.com',
-	notes: 'Queen Regent'
-},
-{
-	id: 2,
-	firstName: 'Jaime',
-	lastName: 'Lannister',
-	companyName: 'Westerlands',
-	address: 'Red Keep',
-	city: "King's Landing",
-	state: 'Crownlands',
-	mobile: '555-1212',
-	fax: '555-1212',
-	email: 'jaime@lannister.com',
-	notes: 'Father of the King (confidential)'
-},
-{
-	id: 3,
-	firstName: 'Jon',
-	lastName: 'Snow',
-	address: 'Castle Black',
-	city: 'The Wall',
-	state: 'North',
-	home: '555-1212',
-	email: 'jon@nightswatch.org',
-}];
 
 export default Person;
