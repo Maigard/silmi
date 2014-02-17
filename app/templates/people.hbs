@@ -16,8 +16,8 @@
 	</tr>
 	{{#each}}
 	<tr>
-		<td>{{firstName}}</td>
-		<td>{{lastName}}</td>
+		<td>{{#link-to 'person' this}}{{firstName}}{{/link-to}}</td>
+		<td>{{#link-to 'person' this}}{{lastName}}{{/link-to}}</td>
 		<td>{{companyName}}</td>
 		<td>{{label}}</td>
 		<td>{{address}}</td>
@@ -31,4 +31,4 @@
 	</tr>
 	{{/each}}
 </table>
-
+{{outlet}}
