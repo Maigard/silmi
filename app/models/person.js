@@ -20,7 +20,6 @@ var Person = DS.Model.extend({
 	}.property('firstName', 'lastName'),
 
 	label: function () {
-		console.log(this.get('fullName'), this.get('companyName'));
 		if(this.get('companyName'))
 			return this.get('companyName');
 		else
