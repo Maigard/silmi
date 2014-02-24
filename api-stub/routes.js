@@ -39,6 +39,20 @@ module.exports = function(server) {
 			state: 'North',
 			home: '555-1212',
 			email: 'jon@nightswatch.org',
+		},
+		{
+			id: 3,
+			firstName: 'Arya',
+			lastName: 'Stark',
+			companyName: 'The North',
+			address: 'House Stark',
+			city: "Winterfell",
+			state: 'The North',
+			phone: '555-1212',
+			mobile: '555-1212',
+			fax: '555-1212',
+			email: 'arya@stark.com',
+			notes: 'Valar Morghulis'
 		}];
 
 		server.get('/people', function(req, res) {
