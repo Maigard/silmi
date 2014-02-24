@@ -174,8 +174,9 @@ padding-top: 5px;
 
 h1,h2,h3 {
    font-weight:800;
-   margin: 5px 10px;
+   margin: 10px 10px;
    padding: 0;
+   float: left;
 }
 
 
@@ -231,8 +232,10 @@ h1,h2,h3 {
   width: 100%;
   height: 100%;
   border: 1px solid #8a8acf;
-  padding: 10px 10px 0 10px;
+  padding: 0 10px 0 10px;
 }
+
+
 
 /*.table-wrap {
   background-color: #fff;
@@ -242,46 +245,55 @@ h1,h2,h3 {
 }*/
 
 /*table styles*/
-table { 
-width: 100%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-collapse: separate;
-border-left: 0;
-border-radius: 4px;
-border-spacing: 0px;
+table {
+  float: left;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-collapse: separate;
+  border-left: 0;
+  border-radius: 4px;
+  border-spacing: 0px;
 }
 html, body {
-font: 11px/13px "Lucida Grande", "Tahoma", sans-serif;           
+  font: 11px/13px "Lucida Grande", "Tahoma", sans-serif;           
 }
 
 thead {
-display: table-header-group;
-vertical-align: middle;
-border-color: inherit;
-border-collapse: separate;
-background-image: linear-gradient(to bottom,rgb(142,142,210),rgb(115,118,191));
-color: #fff;
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  border-collapse: separate;
+  background-image: linear-gradient(to bottom,rgb(142,142,210),rgb(115,118,191));
+  color: #fff;
+}
+thead a{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  border-collapse: separate;
+  background-image: linear-gradient(to bottom,rgb(142,142,210),rgb(115,118,191));
+  color: #fff;
 }
 tr {
-display: table-row;
-vertical-align: inherit;
-border-color: inherit;
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
 }
 th, td {
-padding: 5px 4px 6px 4px; 
-text-align: left;
-vertical-align: top;
-border: 1px solid #ddd;    
+  padding: 5px 4px 6px 4px; 
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #ddd;    
 }
 td {
-border-top: 1px solid #ddd;    
+  border-top: 1px solid #ddd;    
 }
 thead:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child {
-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
 }
 thead:last-child tr:last-child th:first-child, tbody:last-child tr:last-child td:first-child {
-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
 }
  /* end of table styles */
 
@@ -289,7 +301,7 @@ border-radius: 0 0 0 4px;
 .right-wrap {
   position: fixed;
   right: 0;
-  padding: 30px;
+  padding: 10px 10px 0 10px;
   color: inherit;
   background-color: #e2e6fe;
   border-radius: 6px 0 0 0;
@@ -433,20 +445,6 @@ border-color: #5a5ca8;
  * --------------------------------------------------
  */
 @media screen and (max-width: 768px) {
- /*.jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-  .container .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
-  .jumbotron h1,
-  .jumbotron .h1 {
-    font-size: 63px;
-  }
-  */
-
   .row-offcanvas {
     position: relative;
     -webkit-transition: all 0.25s ease-out;
