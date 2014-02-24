@@ -1,52 +1,52 @@
 <div class="right-wrap slidein" id="slidePanel">
-	<h2>{{#link-to "people" class="btn btn-default right-close"}}<i class="glyphicon glyphicon-chevron-right"></i>{{/link-to}} Person</h2>
-	<table>
+	<nav class="navbar navbar-panel"><div class="nav navbar-nav"><h2>Person</h2></div><div class="nav navbar-right">{{#link-to "people" }}<img class="close" src="/assets/x_icon.png"  />{{/link-to}}</div></nav>
+	<table class="person-table">
 		<tr>
-			<th>First Name</th>
+			<th class="labels">First Name</th>
 			<td>{{firstName}}</td>
 		</tr>
 		<tr>
-			<th>Last Name</th>
+			<th class="labels">Last Name</th>
 			<td>{{lastName}}</td>
 		</tr>
 		<tr>
-			<th>Company Name</th>
+			<th class="labels">Company Name</th>
 			<td>{{companyName}}</td>
 		</tr>
 		<tr>
-			<th>Label</th>
+			<th class="labels">Label</th>
 			<td>{{label}}</td>
 		</tr>
 		<tr>
-			<th>Address</th>
+			<th class="labels">Address</th>
 			<td>{{address}}</td>
 		</tr>
 		<tr>
-			<th>City</th>
+			<th class="labels">City</th>
 			<td>{{city}}</td>
 		</tr>
 		<tr>
-			<th>State</th>
+			<th class="labels">State</th>
 			<td>{{state}}</td>
 		</tr>
 		<tr>
-			<th>Phone</th>
+			<th class="labels">Phone</th>
 			<td>{{phone}}</td>
 		</tr>
 		<tr>
-			<th>Mobile</th>
+			<th class="labels">Mobile</th>
 			<td>{{mobile}}</td>
 		</tr>
 		<tr>
-			<th>Fax</th>
+			<th class="labels">Fax</th>
 			<td>{{fax}}</td>
 		</tr>
 		<tr>
-			<th>Email</th>
+			<th class="labels">Email</th>
 			<td>{{email}}</td>
 		</tr>
 		<tr>
-			<th>Notes</th>
+			<th class="labels">Notes</th>
 			<td>{{notes}}</td>
 		</tr>
 	</table>
