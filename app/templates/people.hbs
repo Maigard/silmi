@@ -1,8 +1,6 @@
 <div class="inner-wrap">
 	<h2>People</h2>
-	<div class="table-wrap">
 		<table>
-
 			<thead>
 				{{#view "sort-header" sortField="lastName"}}Last Name{{/view}}
 				{{#view "sort-header" sortField="firstName"}}First Name{{/view}}
@@ -19,21 +17,20 @@
 			</thead>
 			{{#each}}
 			<tr>
-				<td>{{#link-to 'person' this}}{{lastName}}{{/link-to}}</td>
 				<td>{{#link-to 'person' this}}{{firstName}}{{/link-to}}</td>
-				<td>{{companyName}}</td>
-				<td>{{label}}</td>
-				<td>{{address}}</td>
-				<td>{{city}}</td>
-				<td>{{state}}</td>
-				<td>{{phone}}</td>
-				<td>{{mobile}}</td>
-				<td>{{fax}}</td>
-				<td>{{email}}</td>
-				<td>{{notes}}</td>
+				<td>{{#link-to 'person' this}}{{lastName}}{{/link-to}}</td>
+				<td>{{#link-to 'person' this}}{{companyName}}{{/link-to}}</td>
+				<td>{{#link-to 'person' this}}{{label}}{{/link-to}}</td>
+				<td>{{#link-to 'person' this}}{{address}}{{/link-to}}</td>
+				<td>{{#link-to 'person' this}}{{city}}{{/link-to}}</td>
+				<td>{{#link-to 'person' this}}{{state}}{{/link-to}}</td>
+				<td>{{#link-to 'person' this}}{{phone}}{{/link-to}}</td>
+				<td>{{#link-to 'person' this}}{{mobile}}{{/link-to}}</td>
+				<td>{{#link-to 'person' this}}{{fax}}{{/link-to}}</td>
+				<td>{{#link-to 'person' this}}{{email}}{{/link-to}}</td>
+				<td>{{#link-to 'person' this}}{{notes}}{{/link-to}}</td>
 			</tr>
 			{{/each}}
 		</table>
-	</div>
-</div>
-{{outlet}}
+		{{outlet}}
+
