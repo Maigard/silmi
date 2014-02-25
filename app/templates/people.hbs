@@ -4,18 +4,18 @@
 		<table>
 
 			<thead>
-				<th>Last Name</th>
-				<th>First Name</th>
-				<th>Company Name</th>
-				<th>Label</th>
-				<th>Address</th>
-				<th>City</th>
-				<th>State</th>
-				<th>Phone</th>
-				<th>Mobile</th>
-				<th>Fax</th>
-				<th>Email</th>
-				<th>Notes</th>
+				{{#view "sort-header" sortField="lastName"}}Last Name{{/view}}
+				{{#view "sort-header" sortField="firstName"}}First Name{{/view}}
+				{{#view "sort-header" sortField="companyName"}}Company Name{{/view}}
+				{{#view "sort-header" sortField="label"}}Label{{/view}}
+				{{#view "sort-header" sortField="address"}}Address{{/view}}
+				{{#view "sort-header" sortField="city"}}City{{/view}}
+				{{#view "sort-header" sortField="state"}}State{{/view}}
+				{{#view "sort-header" sortField="phone"}}Phone{{/view}}
+				{{#view "sort-header" sortField="mobile"}}Mobile{{/view}}
+				{{#view "sort-header" sortField="fax"}}Fax{{/view}}
+				{{#view "sort-header" sortField="email"}}Email{{/view}}
+				{{#view "sort-header" sortField="notes"}}Notes{{/view}}
 			</thead>
 			{{#each}}
 			<tr>
