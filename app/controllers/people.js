@@ -4,11 +4,8 @@ var PeopleController = Ember.ArrayController.extend({
 		this.set('sortAscending', true);
 	},
 	actions: {
-		sort: function (field) {
-			console.log("sorting by", field);
-			console.log(this.get('sortProperties'), this.get('sortAscending'));
-			if(this.get('sortProperties')[0] === field)
-				this.toggleProperty('sortAscending');
+		sort: function (field, asc) {
+			this.set('sortAscending', asc);
 			this.set('sortProperties', [field]);
 		}
 	}

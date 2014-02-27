@@ -2,18 +2,18 @@
 	<h2>People</h2>
 		<table>
 			<thead>
-				<th><a href="#" {{action "sort" "firstName"}}>First Name</a></th>
-				<th><a href="#" {{action "sort" "lastName"}}>Last Name</a></th>
-				<th><a href="#" {{action "sort" "companyName"}}>Company Name</a></th>
-				<th><a href="#" {{action "sort" "label"}}>Label</a></th>
-				<th><a href="#" {{action "sort" "address"}}>Address</a></th>
-				<th><a href="#" {{action "sort" "city"}}>City</a></th>
-				<th><a href="#" {{action "sort" "state"}}>State</a></th>
-				<th><a href="#" {{action "sort" "phone"}}>Phone</a></th>
-				<th><a href="#" {{action "sort" "mobile"}}>Mobile</a></th>
-				<th><a href="#" {{action "sort" "fax"}}>Fax</a></th>
-				<th><a href="#" {{action "sort" "email"}}>Email</a></th>
-				<th><a href="#" {{action "sort" "notes"}}>Notes</a></th>
+				{{#view "sort-header" sortField="lastName"}}Last Name{{/view}}
+				{{#view "sort-header" sortField="firstName"}}First Name{{/view}}
+				{{#view "sort-header" sortField="companyName"}}Company Name{{/view}}
+				{{#view "sort-header" sortField="label"}}Label{{/view}}
+				{{#view "sort-header" sortField="address"}}Address{{/view}}
+				{{#view "sort-header" sortField="city"}}City{{/view}}
+				{{#view "sort-header" sortField="state"}}State{{/view}}
+				{{#view "sort-header" sortField="phone"}}Phone{{/view}}
+				{{#view "sort-header" sortField="mobile"}}Mobile{{/view}}
+				{{#view "sort-header" sortField="fax"}}Fax{{/view}}
+				{{#view "sort-header" sortField="email"}}Email{{/view}}
+				{{#view "sort-header" sortField="notes"}}Notes{{/view}}
 			</thead>
 			{{#each}}
 			<tr>
