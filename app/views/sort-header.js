@@ -9,10 +9,10 @@ var SortHeaderView = Ember.View.extend({
 	sorted: false,
 	sortField: "",
 	init: function() {
-		var headerList = this.get('controller').get('sortHeaderList');
+		var headerList = this.get('controller.sortHeaderList');
 		if(headerList === undefined) {
-			headerList = new Array();
-			this.get('controller').set('sortHeaderList', headerList);
+			headerList = [];
+			this.set('controller.sortHeaderList', headerList);
 		}
 		headerList.pushObject(this);
 		this._super();
@@ -22,7 +22,7 @@ var SortHeaderView = Ember.View.extend({
 			this.toggleProperty('asc');
 			this.toggleProperty('desc');
 		} else {
-			var headerList = this.get('controller').get('sortHeaderList');
+			var headerList = this.get('controller.sortHeaderList');
 			headerList.setEach('asc', false);
 			headerList.setEach('desc', false);
 			headerList.setEach('sorted', false);
