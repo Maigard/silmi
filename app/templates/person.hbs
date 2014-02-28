@@ -1,6 +1,15 @@
-
 <div class="right-wrap slidein" id="slidePanel">
-	<nav class="navbar navbar-panel"><div class="nav navbar-nav"><h2>Person</h2></div><div class="nav navbar-right">{{#link-to "people" }}<img class="close" src="/assets/x_icon.png"  />{{/link-to}}</div></nav>
+	<nav class="navbar navbar-panel">
+		<div class="nav navbar-nav">
+			<h2>Person</h2>
+		</div>
+		<div class="nav navbar-right">{{#link-to "people" }}<img class="close" src="/assets/x_icon.png"  />{{/link-to}}</div>
+	</nav>
+	{{#if isEditable}}
+	{{partial "person/form"}}
+	<button {{action "cancel"}} class="btn btn-default">Cancel</button>
+	<button {{action "done"}} class="btn btn-default">Done</button>
+	{{else}}
 	<table class="person-table">
 		<tr>
 			<th class="labels">First Name</th>
@@ -51,4 +60,6 @@
 			<td>{{notes}}</td>
 		</tr>
 	</table>
+	<button {{action "edit"}} class="btn btn-default">Edit</button>
+	{{/if}}
 </div>

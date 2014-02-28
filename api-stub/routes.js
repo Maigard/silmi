@@ -56,33 +56,24 @@ module.exports = function(server) {
 		}];
 
 		server.get('/people', function(req, res) {
-			res.send({people: people});
+			return res.send({people: people});
+		});
+		server.post('/people', function(req, res) {
+			return people.push(req.body);
 		});
 		server.get('/people/:id', function(req, res) {
-			res.send({person: people[req.params.id]});
-		})
-		// Return fixture data for '/api/posts/:id'
-		server.get('/posts/:id', function(req, res) {
-			var post = {
-					  "post": {
-					    "id": 1,
-					    "title": "Rails is omakase",
-					    "comments": ["1", "2"],
-					    "user" : "dhh"
-					  },
-
-					  "comments": [{
-					    "id": "1",
-					    "body": "Rails is unagi"
-					  }, {
-					    "id": "2",
-					    "body": "Omakase O_o"
-					  }]
-					};
-
-			res.send(post);
+			return res.send({person: people[req.params.id]});
 		});
-
+		server.put('/people/:id', function(req, res) {
+			var person = people[parseInt(req.params.id)];
+			for(attr in person) {
+				if(req.body.person.hasOwnProperty(attr)) {
+					person[attr] = req.body.person[attr];
+				}
+			}
+			console.log(people);
+			return true;
+		});
 	});
 
 };

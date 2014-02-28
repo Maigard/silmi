@@ -11,9 +11,9 @@ var Person = DS.Model.extend({
 	fax: DS.attr('string'),
 	email: DS.attr('string'),
 	notes: DS.attr('string'),
-	event_attendance: DS.hasMany('event_attendance'), 
+	//event_attendance: DS.hasMany('event_attendance'), 
 	dvsContact: DS.belongsTo('person'),
-	group: DS.hasMany('group'), 
+	//group: DS.hasMany('group'), 
 
 	fullName: function () {
 		return "%@ %@".fmt(this.get('firstName'), this.get('lastName'));
